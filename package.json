@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-base-cswap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Interchanges two complex single-precision floating-point vectors.",
   "license": "Apache-2.0",
   "author": {
