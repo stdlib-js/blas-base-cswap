@@ -31,6 +31,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-cswap/tags). For example,
+
+```javascript
 import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@v0.0.7-esm/index.mjs';
 ```
 
@@ -246,7 +251,7 @@ im = imagf( z );
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
 import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
-import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@v0.0.7-esm/index.mjs';
+import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@esm/index.mjs';
 
 var re = discreteUniform.factory( 0, 10 );
 var im = discreteUniform.factory( -5, 5 );
