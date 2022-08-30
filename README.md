@@ -31,7 +31,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@esm/index.mjs';
+import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@v0.0.7-esm/index.mjs';
 ```
 
 #### cswap( N, x, strideX, y, strideY )
@@ -246,7 +246,7 @@ im = imagf( z );
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
 import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
-import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@esm/index.mjs';
+import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@v0.0.7-esm/index.mjs';
 
 var re = discreteUniform.factory( 0, 10 );
 var im = discreteUniform.factory( -5, 5 );
