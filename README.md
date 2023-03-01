@@ -291,7 +291,7 @@ console.log( y.get( y.length-1 ).toString() );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/blas/base/ccopy`][@stdlib/blas/base/ccopy]</span><span class="delimiter">: </span><span class="description">copy values from one complex single-precision floating-point vector to another complex single-precision floating-point vector.</span>
+-   <span class="package-name">[`@stdlib/blas-base/ccopy`][@stdlib/blas/base/ccopy]</span><span class="delimiter">: </span><span class="description">copy values from one complex single-precision floating-point vector to another complex single-precision floating-point vector.</span>
 
 </section>
 
