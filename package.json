@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-base-cswap",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Interchanges two complex single-precision floating-point vectors.",
   "license": "Apache-2.0",
   "author": {
@@ -41,21 +41,21 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-float32": "^0.0.6",
-    "@stdlib/assert-is-error": "^0.0.8",
-    "@stdlib/types": "^0.0.14",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.7",
-    "@stdlib/utils-library-manifest": "^0.0.8",
-    "@stdlib/utils-try-require": "^0.0.7"
+    "@stdlib/array-float32": "^0.1.0",
+    "@stdlib/assert-is-error": "^0.1.0",
+    "@stdlib/types": "^0.1.0",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.0",
+    "@stdlib/utils-library-manifest": "^0.1.0",
+    "@stdlib/utils-try-require": "^0.1.0"
   },
   "devDependencies": {
     "@stdlib/array-complex64": "^0.0.6",
-    "@stdlib/assert-is-browser": "^0.0.8",
-    "@stdlib/bench": "^0.0.12",
-    "@stdlib/blas-base-scopy": "^0.0.9",
-    "@stdlib/math-base-assert-is-nan": "^0.0.8",
-    "@stdlib/math-base-special-floor": "^0.0.8",
-    "@stdlib/math-base-special-pow": "^0.0.7",
+    "@stdlib/assert-is-browser": "^0.1.0",
+    "@stdlib/bench": "^0.1.0",
+    "@stdlib/blas-base-scopy": "^0.1.0",
+    "@stdlib/math-base-assert-is-nan": "^0.1.0",
+    "@stdlib/math-base-special-floor": "^0.1.0",
+    "@stdlib/math-base-special-pow": "^0.1.0",
     "@stdlib/random-base-discrete-uniform": "^0.0.6",
     "@stdlib/random-base-randu": "^0.0.8",
     "proxyquire": "^2.0.0",
