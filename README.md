@@ -35,14 +35,30 @@ limitations under the License.
 
 > Interchange two complex single-precision floating-point vectors.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-cswap
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@deno/mod.js';
+var cswap = require( '@stdlib/blas-base-cswap' );
 ```
 
 #### cswap( N, x, strideX, y, strideY )
@@ -50,9 +66,9 @@ import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@deno/mo
 Interchanges two complex single-precision floating-point vectors.
 
 ```javascript
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import realf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-realf@deno/mod.js';
-import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@deno/mod.js';
+var Complex64Array = require( '@stdlib/array-complex64' );
+var realf = require( '@stdlib/complex-realf' );
+var imagf = require( '@stdlib/complex-imagf' );
 
 var x = new Complex64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var y = new Complex64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -81,25 +97,22 @@ im = imagf( z );
 The function has the following parameters:
 
 -   **N**: number of indexed elements.
--   **x**: input [`Complex64Array`][@stdlib/array/complex64].
+-   **x**: first input [`Complex64Array`][@stdlib/array/complex64].
 -   **strideX**: index increment for `x`.
--   **y**: destination [`Complex64Array`][@stdlib/array/complex64].
+-   **y**: second input [`Complex64Array`][@stdlib/array/complex64].
 -   **strideY**: index increment for `y`.
 
-The `N` and `stride` parameters determine how values from `x` are interchanged with values from `y`. For example, to interchange in reverse order every other value in `x` into the first `N` elements of `y`,
+The `N` and stride parameters determine how values from `x` are interchanged with values from `y`. For example, to interchange in reverse order every other value in `x` into the first `N` elements of `y`,
 
 ```javascript
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@deno/mod.js';
-import realf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-realf@deno/mod.js';
-import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@deno/mod.js';
+var Complex64Array = require( '@stdlib/array-complex64' );
+var realf = require( '@stdlib/complex-realf' );
+var imagf = require( '@stdlib/complex-imagf' );
 
 var x = new Complex64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 var y = new Complex64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
-var N = floor( x.length / 2 );
-
-cswap( N, x, -2, y, 1 );
+cswap( 2, x, -2, y, 1 );
 
 var z = y.get( 0 );
 // returns <Complex64>
@@ -125,9 +138,9 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import realf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-realf@deno/mod.js';
-import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@deno/mod.js';
+var Complex64Array = require( '@stdlib/array-complex64' );
+var realf = require( '@stdlib/complex-realf' );
+var imagf = require( '@stdlib/complex-imagf' );
 
 // Initial arrays...
 var x0 = new Complex64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
@@ -164,9 +177,9 @@ im = imagf( z );
 Interchanges two complex single-precision floating-point vectors using alternative indexing semantics.
 
 ```javascript
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import realf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-realf@deno/mod.js';
-import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@deno/mod.js';
+var Complex64Array = require( '@stdlib/array-complex64' );
+var realf = require( '@stdlib/complex-realf' );
+var imagf = require( '@stdlib/complex-imagf' );
 
 var x = new Complex64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var y = new Complex64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -197,12 +210,12 @@ The function has the following additional parameters:
 -   **offsetX**: starting index for `x`.
 -   **offsetY**: starting index for `y`.
 
-While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offsetX` and `offsetY` parameters support indexing semantics based on starting indices. For example, to interchange every other value in `x` starting from the second value into the last `N` elements in `y` where `x[i] = y[n]`, `x[i+2] = y[n-1]`,...,
+While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameters support indexing semantics based on starting indices. For example, to interchange every other value in `x` starting from the second value into the last `N` elements in `y` where `x[i] = y[n]`, `x[i+2] = y[n-1]`,...,
 
 ```javascript
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import realf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-realf@deno/mod.js';
-import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@deno/mod.js';
+var Complex64Array = require( '@stdlib/array-complex64' );
+var realf = require( '@stdlib/complex-realf' );
+var imagf = require( '@stdlib/complex-imagf' );
 
 var x = new Complex64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 ] );
 var y = new Complex64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -250,25 +263,22 @@ im = imagf( z );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var Complex64 = require( '@stdlib/complex-float32' );
+var cswap = require( '@stdlib/blas-base-cswap' );
 
-var re = discreteUniform.factory( 0, 10 );
-var im = discreteUniform.factory( -5, 5 );
-
-var x = new Complex64Array( 10 );
-var y = new Complex64Array( 10 );
-
-var i;
-for ( i = 0; i < x.length; i++ ) {
-    x.set( [ re(), im() ], i );
-    y.set( [ re(), im() ], i );
+function rand() {
+    return new Complex64( discreteUniform( 0, 10 ), discreteUniform( -5, 5 ) );
 }
+
+var x = filledarrayBy( 10, 'complex64', rand );
 console.log( x.get( 0 ).toString() );
+
+var y = filledarrayBy( 10, 'complex64', rand );
 console.log( y.get( 0 ).toString() );
 
-// Swap elements in `x` and `y` starting from the end of `y`:
+// Swap elements in `x` into `y` starting from the end of `y`:
 cswap( x.length, x, 1, y, -1 );
 console.log( x.get( x.length-1 ).toString() );
 console.log( y.get( y.length-1 ).toString() );
@@ -301,7 +311,7 @@ console.log( y.get( y.length-1 ).toString() );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -367,11 +377,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/deno
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/ccopy]: https://github.com/stdlib-js/blas-base-ccopy/tree/deno
+[@stdlib/blas/base/ccopy]: https://github.com/stdlib-js/blas-base-ccopy
 
 <!-- </related-links> -->
 
