@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@esm/index.mjs';
+import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@v0.3.0-esm/index.mjs';
 ```
 
 #### cswap( N, x, strideX, y, strideY )
@@ -255,7 +255,7 @@ im = imagf( z );
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
-import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@esm/index.mjs';
+import cswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-cswap@v0.3.0-esm/index.mjs';
 
 function rand() {
     return new Complex64( discreteUniform( 0, 10 ), discreteUniform( -5, 5 ) );
