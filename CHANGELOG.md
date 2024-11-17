@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`38656e4`](https://github.com/stdlib-js/stdlib/commit/38656e4893257726e3c3276ff3cead5f2f02c5c5) - **docs:** fix example _(by Athan Reines)_
 -   [`adbee81`](https://github.com/stdlib-js/stdlib/commit/adbee8105b6903730d070261f36127b5744cabbb) - **docs:** fix description _(by Athan Reines)_
 -   [`ed44fee`](https://github.com/stdlib-js/stdlib/commit/ed44feecb9eaa5e0849d1a533e5415624d0aa338) - **style:** use imperative in package.json description and end with period _(by Philipp Burckhardt)_
 -   [`2777e4b`](https://github.com/stdlib-js/stdlib/commit/2777e4be161869d09406e3b17947d24c64b47af2) - **bench:** resolve lint errors in benchmarks _(by Athan Reines)_
