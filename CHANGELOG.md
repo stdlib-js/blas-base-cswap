@@ -6,12 +6,23 @@
 
 ## Unreleased (2024-11-17)
 
+<section class="features">
+
+### Features
+
+-   [`953e73d`](https://github.com/stdlib-js/stdlib/commit/953e73d1fd1c06babf0ed16dcc94430152abf5a8) - update JavaScript implementation and add C `ndarray` implementation for `blas/base/cswap` [(#3064)](https://github.com/stdlib-js/stdlib/pull/3064)
+
+</section>
+
+<!-- /.features -->
+
 <section class="commits">
 
 ### Commits
 
 <details>
 
+-   [`953e73d`](https://github.com/stdlib-js/stdlib/commit/953e73d1fd1c06babf0ed16dcc94430152abf5a8) - **feat:** update JavaScript implementation and add C `ndarray` implementation for `blas/base/cswap` [(#3064)](https://github.com/stdlib-js/stdlib/pull/3064) _(by Aman Bhansali, Athan Reines)_
 -   [`38656e4`](https://github.com/stdlib-js/stdlib/commit/38656e4893257726e3c3276ff3cead5f2f02c5c5) - **docs:** fix example _(by Athan Reines)_
 -   [`adbee81`](https://github.com/stdlib-js/stdlib/commit/adbee8105b6903730d070261f36127b5744cabbb) - **docs:** fix description _(by Athan Reines)_
 -   [`ed44fee`](https://github.com/stdlib-js/stdlib/commit/ed44feecb9eaa5e0849d1a533e5415624d0aa338) - **style:** use imperative in package.json description and end with period _(by Philipp Burckhardt)_
@@ -27,8 +38,9 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Aman Bhansali
 -   Athan Reines
 -   Philipp Burckhardt
 
